@@ -1,0 +1,7111 @@
+{
+  "environment": {
+    "python": "3.12.4",
+    "machine": "arm64",
+    "processor": "arm",
+    "cpus": 16,
+    "platform": "macOS-26.7.1-arm64-arm-64bit"
+  },
+  "lexical": [
+    {
+      "workload": "W1",
+      "stages": 5,
+      "tdg_o200k_base": 132,
+      "script_o200k_base": 161,
+      "airflow_o200k_base": 248,
+      "tdg_cl100k_base": 132,
+      "script_cl100k_base": 157,
+      "airflow_cl100k_base": 244,
+      "tdg_chars": 480,
+      "script_chars": 653,
+      "airflow_chars": 1027
+    },
+    {
+      "workload": "W2",
+      "stages": 8,
+      "tdg_o200k_base": 253,
+      "script_o200k_base": 269,
+      "airflow_o200k_base": 363,
+      "tdg_cl100k_base": 253,
+      "script_cl100k_base": 263,
+      "airflow_cl100k_base": 358,
+      "tdg_chars": 894,
+      "script_chars": 1130,
+      "airflow_chars": 1505
+    },
+    {
+      "workload": "W3",
+      "stages": 9,
+      "tdg_o200k_base": 195,
+      "script_o200k_base": 186,
+      "airflow_o200k_base": 251,
+      "tdg_cl100k_base": 195,
+      "script_cl100k_base": 183,
+      "airflow_cl100k_base": 249,
+      "tdg_chars": 679,
+      "script_chars": 785,
+      "airflow_chars": 976
+    },
+    {
+      "workload": "W4",
+      "stages": 4,
+      "tdg_o200k_base": 100,
+      "script_o200k_base": 126,
+      "airflow_o200k_base": 208,
+      "tdg_cl100k_base": 100,
+      "script_cl100k_base": 123,
+      "airflow_cl100k_base": 205,
+      "tdg_chars": 359,
+      "script_chars": 511,
+      "airflow_chars": 850
+    },
+    {
+      "workload": "W5",
+      "stages": 9,
+      "tdg_o200k_base": 208,
+      "script_o200k_base": 277,
+      "airflow_o200k_base": 320,
+      "tdg_cl100k_base": 208,
+      "script_cl100k_base": 271,
+      "airflow_cl100k_base": 316,
+      "tdg_chars": 746,
+      "script_chars": 1145,
+      "airflow_chars": 1318
+    }
+  ],
+  "scaling": [
+    {
+      "stages": 1,
+      "text_bytes": 67,
+      "artifact_bytes": 171,
+      "levels": 1,
+      "parse_ms": 0.1633745,
+      "compile_ms": 0.007541,
+      "emit_ms": 0.005666,
+      "load_ms": 0.012208,
+      "print_ms": 0.004458
+    },
+    {
+      "stages": 5,
+      "text_bytes": 379,
+      "artifact_bytes": 651,
+      "levels": 2,
+      "parse_ms": 1.569791,
+      "compile_ms": 0.020958,
+      "emit_ms": 0.018417,
+      "load_ms": 0.030667,
+      "print_ms": 0.015208
+    },
+    {
+      "stages": 20,
+      "text_bytes": 1647,
+      "artifact_bytes": 2553,
+      "levels": 6,
+      "parse_ms": 3.70825,
+      "compile_ms": 0.046583,
+      "emit_ms": 0.071417,
+      "load_ms": 0.10375,
+      "print_ms": 0.048625
+    },
+    {
+      "stages": 100,
+      "text_bytes": 8427,
+      "artifact_bytes": 12735,
+      "levels": 26,
+      "parse_ms": 19.386938,
+      "compile_ms": 0.36325,
+      "emit_ms": 0.391417,
+      "load_ms": 0.8569370000000001,
+      "print_ms": 0.270917
+    },
+    {
+      "stages": 1000,
+      "text_bytes": 86725,
+      "artifact_bytes": 130182,
+      "levels": 251,
+      "parse_ms": 283.670167,
+      "compile_ms": 13.878625,
+      "emit_ms": 6.3302295,
+      "load_ms": 8.102958,
+      "print_ms": 3.911208
+    }
+  ],
+  "scheduling": {
+    "latency_runs": [
+      {
+        "workload": "W2",
+        "stages": 8,
+        "levels": 6,
+        "max_width": 2,
+        "latency_ms": 20.0,
+        "seq_ms": 85.366417,
+        "par_ms": 56.201916,
+        "speedup": 1.5189236075154449
+      },
+      {
+        "workload": "W5",
+        "stages": 9,
+        "levels": 6,
+        "max_width": 2,
+        "latency_ms": 20.0,
+        "seq_ms": 81.902917,
+        "par_ms": 52.113375,
+        "speedup": 1.571629490509874
+      },
+      {
+        "workload": "wide8x3",
+        "stages": 25,
+        "levels": 4,
+        "max_width": 8,
+        "latency_ms": 20.0,
+        "seq_ms": 640.273708,
+        "par_ms": 82.054041,
+        "speedup": 7.80307344034403
+      }
+    ],
+    "zero_latency": {
+      "W1": {
+        "stages": 5,
+        "seq_ms": 0.425916,
+        "par_ms": 0.513292
+      },
+      "W2": {
+        "stages": 8,
+        "seq_ms": 0.5896250000000001,
+        "par_ms": 0.717042
+      },
+      "W3": {
+        "stages": 9,
+        "seq_ms": 0.373792,
+        "par_ms": 0.325833
+      },
+      "W4": {
+        "stages": 4,
+        "seq_ms": 14.00225,
+        "par_ms": 13.008917
+      },
+      "W5": {
+        "stages": 9,
+        "seq_ms": 0.556333,
+        "par_ms": 0.874542
+      }
+    }
+  },
+  "capabilities": {
+    "attacks": {
+      "fs_traversal": {
+        "n": 25,
+        "denied": 25
+      },
+      "fs_symlink": {
+        "n": 25,
+        "denied": 25
+      },
+      "fs_write_readonly": {
+        "n": 25,
+        "denied": 25
+      },
+      "net_host": {
+        "n": 25,
+        "denied": 25
+      },
+      "net_scope": {
+        "n": 25,
+        "denied": 25
+      },
+      "shell_command": {
+        "n": 25,
+        "denied": 25
+      },
+      "shell_args": {
+        "n": 25,
+        "denied": 25
+      },
+      "token_misuse": {
+        "n": 25,
+        "denied": 25
+      }
+    },
+    "benign": {
+      "fs_read": {
+        "n": 25,
+        "denied": 0
+      },
+      "fs_read_nested": {
+        "n": 25,
+        "denied": 0
+      },
+      "fs_write": {
+        "n": 25,
+        "denied": 0
+      },
+      "net_get": {
+        "n": 25,
+        "denied": 0
+      },
+      "net_get_repeat": {
+        "n": 25,
+        "denied": 0
+      },
+      "shell_run": {
+        "n": 25,
+        "denied": 0
+      },
+      "shell_run_repeat": {
+        "n": 25,
+        "denied": 0
+      },
+      "token_use": {
+        "n": 25,
+        "denied": 0
+      }
+    },
+    "n_attacks": 200,
+    "n_benign": 200,
+    "bypasses": [],
+    "false_denials": []
+  },
+  "capabilities_naive_shell": {
+    "attacks": {
+      "fs_traversal": {
+        "n": 25,
+        "denied": 25
+      },
+      "fs_symlink": {
+        "n": 25,
+        "denied": 25
+      },
+      "fs_write_readonly": {
+        "n": 25,
+        "denied": 25
+      },
+      "net_host": {
+        "n": 25,
+        "denied": 25
+      },
+      "net_scope": {
+        "n": 25,
+        "denied": 25
+      },
+      "shell_command": {
+        "n": 25,
+        "denied": 25
+      },
+      "shell_args": {
+        "n": 25,
+        "denied": 10
+      },
+      "token_misuse": {
+        "n": 25,
+        "denied": 25
+      }
+    },
+    "benign": {
+      "fs_read": {
+        "n": 25,
+        "denied": 0
+      },
+      "fs_read_nested": {
+        "n": 25,
+        "denied": 0
+      },
+      "fs_write": {
+        "n": 25,
+        "denied": 0
+      },
+      "net_get": {
+        "n": 25,
+        "denied": 0
+      },
+      "net_get_repeat": {
+        "n": 25,
+        "denied": 0
+      },
+      "shell_run": {
+        "n": 25,
+        "denied": 0
+      },
+      "shell_run_repeat": {
+        "n": 25,
+        "denied": 0
+      },
+      "token_use": {
+        "n": 25,
+        "denied": 0
+      }
+    },
+    "n_attacks": 200,
+    "n_benign": 200,
+    "bypasses": [
+      {
+        "category": "shell_args",
+        "target": "wc -l data/../private/k2.csv",
+        "denied": false
+      },
+      {
+        "category": "shell_args",
+        "target": "wc -l data/../private/k3.csv",
+        "denied": false
+      },
+      {
+        "category": "shell_args",
+        "target": "wc -l data/link6.csv",
+        "denied": false
+      },
+      {
+        "category": "shell_args",
+        "target": "wc -l data/../private/k7.csv",
+        "denied": false
+      },
+      {
+        "category": "shell_args",
+        "target": "wc -l data/f8.csv private/k8.csv",
+        "denied": false
+      },
+      {
+        "category": "shell_args",
+        "target": "wc -l data/link9.csv",
+        "denied": false
+      },
+      {
+        "category": "shell_args",
+        "target": "wc -l data/f10.csv private/k10.csv",
+        "denied": false
+      },
+      {
+        "category": "shell_args",
+        "target": "wc -l data/link12.csv",
+        "denied": false
+      },
+      {
+        "category": "shell_args",
+        "target": "wc -l data/link13.csv",
+        "denied": false
+      },
+      {
+        "category": "shell_args",
+        "target": "wc -l data/../private/k15.csv",
+        "denied": false
+      },
+      {
+        "category": "shell_args",
+        "target": "wc -l data/f16.csv private/k16.csv",
+        "denied": false
+      },
+      {
+        "category": "shell_args",
+        "target": "wc -l data/../private/k17.csv",
+        "denied": false
+      },
+      {
+        "category": "shell_args",
+        "target": "wc -l data/f18.csv private/k18.csv",
+        "denied": false
+      },
+      {
+        "category": "shell_args",
+        "target": "wc -l data/../private/k19.csv",
+        "denied": false
+      },
+      {
+        "category": "shell_args",
+        "target": "wc -l data/../private/k21.csv",
+        "denied": false
+      }
+    ],
+    "false_denials": []
+  },
+  "check_latency": {
+    "fs_us": 60.375,
+    "net_us": 3.7079999999999997,
+    "shell_us": 49.292,
+    "model_us": 0.9169999999999999
+  },
+  "repair": {
+    "summary": {
+      "dep_typo": {
+        "n": 25,
+        "detected": 25,
+        "proposed": 22,
+        "top1_resolves": 22,
+        "top3_resolves": 22,
+        "top1_intended": 22,
+        "top1_authority": 0
+      },
+      "input_typo": {
+        "n": 25,
+        "detected": 25,
+        "proposed": 20,
+        "top1_resolves": 20,
+        "top3_resolves": 20,
+        "top1_intended": 20,
+        "top1_authority": 0
+      },
+      "op_typo": {
+        "n": 25,
+        "detected": 25,
+        "proposed": 24,
+        "top1_resolves": 24,
+        "top3_resolves": 24,
+        "top1_intended": 24,
+        "top1_authority": 0
+      },
+      "cap_typo": {
+        "n": 25,
+        "detected": 25,
+        "proposed": 25,
+        "top1_resolves": 25,
+        "top3_resolves": 25,
+        "top1_intended": 25,
+        "top1_authority": 0
+      },
+      "status_strict": {
+        "n": 25,
+        "detected": 25,
+        "proposed": 25,
+        "top1_resolves": 25,
+        "top3_resolves": 25,
+        "top1_intended": 25,
+        "top1_authority": 0
+      },
+      "transient_5xx": {
+        "n": 25,
+        "detected": 25,
+        "proposed": 25,
+        "top1_resolves": 21,
+        "top3_resolves": 21,
+        "top1_intended": 21,
+        "top1_authority": 0
+      },
+      "field_key_typo": {
+        "n": 25,
+        "detected": 18,
+        "proposed": 15,
+        "top1_resolves": 15,
+        "top3_resolves": 15,
+        "top1_intended": 15,
+        "top1_authority": 0
+      },
+      "bound_tight": {
+        "n": 25,
+        "detected": 25,
+        "proposed": 25,
+        "top1_resolves": 25,
+        "top3_resolves": 25,
+        "top1_intended": 0,
+        "top1_authority": 0
+      },
+      "permanent_404": {
+        "n": 25,
+        "detected": 25,
+        "proposed": 0,
+        "top1_resolves": 0,
+        "top3_resolves": 0,
+        "top1_intended": 0,
+        "top1_authority": 0
+      },
+      "url_host_typo": {
+        "n": 25,
+        "detected": 25,
+        "proposed": 25,
+        "top1_resolves": 0,
+        "top3_resolves": 0,
+        "top1_intended": 0,
+        "top1_authority": 25
+      }
+    },
+    "trials": [
+      {
+        "category": "dep_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "save",
+            {
+              "after": [
+                [
+                  "summary"
+                ],
+                [
+                  "ssummary"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W4",
+        "changed": [
+          [
+            "result",
+            {
+              "after": [
+                [
+                  "lines",
+                  "size"
+                ],
+                [
+                  "lines",
+                  "sdze"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W4",
+        "changed": [
+          [
+            "size",
+            {
+              "after": [
+                [
+                  "raw"
+                ],
+                [
+                  "raz"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "result",
+            {
+              "after": [
+                [
+                  "save",
+                  "n"
+                ],
+                [
+                  "save",
+                  "nn"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "orders",
+            {
+              "after": [
+                [
+                  "fetch"
+                ],
+                [
+                  "fotch"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "n",
+            {
+              "after": [
+                [
+                  "orders"
+                ],
+                [
+                  "ordehs"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "few",
+            {
+              "after": [
+                [
+                  "n"
+                ],
+                [
+                  "a"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W4",
+        "changed": [
+          [
+            "size",
+            {
+              "after": [
+                [
+                  "raw"
+                ],
+                [
+                  "rraw"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "escalate",
+            {
+              "after": [
+                [
+                  "triage"
+                ],
+                [
+                  "triiage"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "no",
+            {
+              "after": [
+                [
+                  "o"
+                ],
+                [
+                  "l"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "save",
+            {
+              "after": [
+                [
+                  "joined"
+                ],
+                [
+                  "joiend"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "u",
+            {
+              "after": [
+                [
+                  "users"
+                ],
+                [
+                  "usqrs"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "result",
+            {
+              "after": [
+                [
+                  "save",
+                  "n"
+                ],
+                [
+                  "savee",
+                  "n"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "head",
+            {
+              "after": [
+                [
+                  "b"
+                ],
+                [
+                  "bb"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W4",
+        "changed": [
+          [
+            "result",
+            {
+              "after": [
+                [
+                  "lines",
+                  "size"
+                ],
+                [
+                  "linee",
+                  "size"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "result",
+            {
+              "after": [
+                [
+                  "joined",
+                  "save"
+                ],
+                [
+                  "qoined",
+                  "save"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "few",
+            {
+              "after": [
+                [
+                  "n"
+                ],
+                [
+                  "o"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "open",
+            {
+              "after": [
+                [
+                  "fetch"
+                ],
+                [
+                  "fetca"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "result",
+            {
+              "after": [
+                [
+                  "save",
+                  "summary"
+                ],
+                [
+                  "ave",
+                  "summary"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "result",
+            {
+              "after": [
+                [
+                  "joined",
+                  "save"
+                ],
+                [
+                  "joined",
+                  "asve"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "orders",
+            {
+              "after": [
+                [
+                  "fetch"
+                ],
+                [
+                  "fecth"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "brief",
+            {
+              "after": [
+                [
+                  "total",
+                  "head"
+                ],
+                [
+                  "toal",
+                  "head"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "n",
+            {
+              "after": [
+                [
+                  "open"
+                ],
+                [
+                  "opn"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "o",
+            {
+              "after": [
+                [
+                  "orders"
+                ],
+                [
+                  "ordeers"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "dep_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "report",
+            {
+              "after": [
+                [
+                  "quiet"
+                ],
+                [
+                  "uqiet"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "quiet",
+            {
+              "inputs": [
+                [
+                  "n"
+                ],
+                [
+                  "i"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "input_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "n"
+                ],
+                [
+                  "h"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "input_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "n"
+                ],
+                [
+                  "s"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "input_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "summary"
+                ],
+                [
+                  "sumamry"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "joined"
+                ],
+                [
+                  "jooined"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "summary"
+                ],
+                [
+                  "summarry"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "summary"
+                ],
+                [
+                  "ummary"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "joined"
+                ],
+                [
+                  "jzined"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "joined"
+                ],
+                [
+                  "joned"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "n"
+                ],
+                [
+                  "nn"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "n"
+                ],
+                [
+                  "nn"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "summary"
+                ],
+                [
+                  "sumary"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "summary"
+                ],
+                [
+                  "summmry"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "joined"
+                ],
+                [
+                  "ojined"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "summary"
+                ],
+                [
+                  "sumary"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "quiet",
+            {
+              "inputs": [
+                [
+                  "n"
+                ],
+                [
+                  "nn"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "n"
+                ],
+                [
+                  "t"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "input_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "joined"
+                ],
+                [
+                  "joiend"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "n"
+                ],
+                [
+                  "nn"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "joined"
+                ],
+                [
+                  "jjoined"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "n"
+                ],
+                [
+                  "b"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "input_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "summary"
+                ],
+                [
+                  "ummary"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "summary"
+                ],
+                [
+                  "sumamry"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "joined"
+                ],
+                [
+                  "jodned"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "input_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "result",
+            {
+              "inputs": [
+                [
+                  "summary"
+                ],
+                [
+                  "usmmary"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "triage",
+            {
+              "op": [
+                "model.call",
+                "model.calll"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W4",
+        "changed": [
+          [
+            "lines",
+            {
+              "op": [
+                "shell.run",
+                "scell.run"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "few",
+            {
+              "op": [
+                "lt",
+                "it"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "op_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "save",
+            {
+              "op": [
+                "fs.write",
+                "fs.wrile"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 2,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "open",
+            {
+              "op": [
+                "field",
+                "fild"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "b",
+            {
+              "op": [
+                "net.get",
+                "nnet.get"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "op": [
+                "net.get",
+                "vet.get"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "no",
+            {
+              "op": [
+                "count",
+                "cout"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 2,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "op": [
+                "net.get",
+                "neet.get"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "quiet",
+            {
+              "op": [
+                "template",
+                "tempplate"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "op": [
+                "net.get",
+                "nte.get"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "a",
+            {
+              "op": [
+                "net.get",
+                "net.et"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "n",
+            {
+              "op": [
+                "count",
+                "ocunt"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "op": [
+                "net.get",
+                "nett.get"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W4",
+        "changed": [
+          [
+            "lines",
+            {
+              "op": [
+                "shell.run",
+                "sell.run"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "no",
+            {
+              "op": [
+                "count",
+                "cunt"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 2,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "b",
+            {
+              "op": [
+                "net.get",
+                "nett.get"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "n",
+            {
+              "op": [
+                "count",
+                "cunt"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 2,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "brief",
+            {
+              "op": [
+                "template",
+                "templtae"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "o",
+            {
+              "op": [
+                "field",
+                "fild"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W4",
+        "changed": [
+          [
+            "size",
+            {
+              "op": [
+                "length",
+                "ength"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "total",
+            {
+              "op": [
+                "field",
+                "fiedl"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W4",
+        "changed": [
+          [
+            "size",
+            {
+              "op": [
+                "length",
+                "lengtth"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W4",
+        "changed": [
+          [
+            "size",
+            {
+              "op": [
+                "length",
+                "nength"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "op_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "open",
+            {
+              "op": [
+                "field",
+                "fielld"
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "save",
+            {
+              "uses": [
+                [
+                  "out"
+                ],
+                [
+                  "uot"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "uses": [
+                [
+                  "api"
+                ],
+                [
+                  "pi"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "triage",
+            {
+              "uses": [
+                [
+                  "llm"
+                ],
+                [
+                  "lln"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "a",
+            {
+              "uses": [
+                [
+                  "sales"
+                ],
+                [
+                  "sals"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "uses": [
+                [
+                  "api"
+                ],
+                [
+                  "apii"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W4",
+        "changed": [
+          [
+            "raw",
+            {
+              "uses": [
+                [
+                  "data"
+                ],
+                [
+                  "daa"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W4",
+        "changed": [
+          [
+            "lines",
+            {
+              "uses": [
+                [
+                  "sh"
+                ],
+                [
+                  "shh"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "a",
+            {
+              "uses": [
+                [
+                  "sales"
+                ],
+                [
+                  "saales"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "users",
+            {
+              "uses": [
+                [
+                  "src"
+                ],
+                [
+                  "srrc"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "triage",
+            {
+              "uses": [
+                [
+                  "llm"
+                ],
+                [
+                  "ll"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W4",
+        "changed": [
+          [
+            "raw",
+            {
+              "uses": [
+                [
+                  "data"
+                ],
+                [
+                  "dta"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "triage",
+            {
+              "uses": [
+                [
+                  "llm"
+                ],
+                [
+                  "ll"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "save",
+            {
+              "uses": [
+                [
+                  "out"
+                ],
+                [
+                  "ouv"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "triage",
+            {
+              "uses": [
+                [
+                  "llm"
+                ],
+                [
+                  "ll"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "uses": [
+                [
+                  "api"
+                ],
+                [
+                  "apii"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "save",
+            {
+              "uses": [
+                [
+                  "out"
+                ],
+                [
+                  "uot"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "save",
+            {
+              "uses": [
+                [
+                  "out"
+                ],
+                [
+                  "otu"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "save",
+            {
+              "uses": [
+                [
+                  "out"
+                ],
+                [
+                  "oft"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "triage",
+            {
+              "uses": [
+                [
+                  "llm"
+                ],
+                [
+                  "ll"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W4",
+        "changed": [
+          [
+            "raw",
+            {
+              "uses": [
+                [
+                  "data"
+                ],
+                [
+                  "wata"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "triage",
+            {
+              "uses": [
+                [
+                  "llm"
+                ],
+                [
+                  "lm"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "users",
+            {
+              "uses": [
+                [
+                  "src"
+                ],
+                [
+                  "sr"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W4",
+        "changed": [
+          [
+            "raw",
+            {
+              "uses": [
+                [
+                  "data"
+                ],
+                [
+                  "dtaa"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "uses": [
+                [
+                  "api"
+                ],
+                [
+                  "ai"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "cap_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "b",
+            {
+              "uses": [
+                [
+                  "news"
+                ],
+                [
+                  "newws"
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "compile",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W5",
+        "changed": [
+          [
+            "orders",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W2",
+        "changed": [
+          [
+            "b",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      65536
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      65536
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W2",
+        "changed": [
+          [
+            "b",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      65536
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      65536
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      65536
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      65536
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W2",
+        "changed": [
+          [
+            "a",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W5",
+        "changed": [
+          [
+            "orders",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W2",
+        "changed": [
+          [
+            "a",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W5",
+        "changed": [
+          [
+            "users",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W5",
+        "changed": [
+          [
+            "orders",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W5",
+        "changed": [
+          [
+            "users",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W5",
+        "changed": [
+          [
+            "users",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W5",
+        "changed": [
+          [
+            "orders",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W2",
+        "changed": [
+          [
+            "b",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      65536
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      65536
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W2",
+        "changed": [
+          [
+            "b",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W2",
+        "changed": [
+          [
+            "a",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "status_strict",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      65536
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      200
+                    ]
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      65536
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W5",
+        "changed": [
+          [
+            "orders",
+            {
+              "on_violation": [
+                {
+                  "action": "retry",
+                  "count": 3
+                },
+                {
+                  "action": "propose",
+                  "count": 0
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 1,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W3",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 2,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W5",
+        "changed": [
+          [
+            "users",
+            {
+              "on_violation": [
+                {
+                  "action": "retry",
+                  "count": 3
+                },
+                {
+                  "action": "propose",
+                  "count": 0
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 3,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W1",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 1,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W1",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 1,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W5",
+        "changed": [
+          [
+            "users",
+            {
+              "on_violation": [
+                {
+                  "action": "retry",
+                  "count": 3
+                },
+                {
+                  "action": "propose",
+                  "count": 0
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 1,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W3",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 2,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W2",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 3,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W1",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 3,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W5",
+        "changed": [
+          [
+            "users",
+            {
+              "on_violation": [
+                {
+                  "action": "retry",
+                  "count": 3
+                },
+                {
+                  "action": "propose",
+                  "count": 0
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 2,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W5",
+        "changed": [
+          [
+            "orders",
+            {
+              "on_violation": [
+                {
+                  "action": "retry",
+                  "count": 3
+                },
+                {
+                  "action": "propose",
+                  "count": 0
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 1,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W2",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 4,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W3",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 2,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W5",
+        "changed": [
+          [
+            "users",
+            {
+              "on_violation": [
+                {
+                  "action": "retry",
+                  "count": 3
+                },
+                {
+                  "action": "propose",
+                  "count": 0
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 1,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W3",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 2,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W2",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 2,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W5",
+        "changed": [
+          [
+            "users",
+            {
+              "on_violation": [
+                {
+                  "action": "retry",
+                  "count": 3
+                },
+                {
+                  "action": "propose",
+                  "count": 0
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 3,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W5",
+        "changed": [
+          [
+            "users",
+            {
+              "on_violation": [
+                {
+                  "action": "retry",
+                  "count": 3
+                },
+                {
+                  "action": "propose",
+                  "count": 0
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 2,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W3",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 4,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W1",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 3,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W1",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 4,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W1",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 1,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W5",
+        "changed": [
+          [
+            "users",
+            {
+              "on_violation": [
+                {
+                  "action": "retry",
+                  "count": 3
+                },
+                {
+                  "action": "propose",
+                  "count": 0
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 2,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W1",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 4,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "transient_5xx",
+        "workload": "W3",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "retry",
+        "failures_before_success": 2,
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "head",
+            {
+              "args": [
+                {
+                  "key": "headline"
+                },
+                {
+                  "key": "headlin"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "total",
+            {
+              "args": [
+                {
+                  "key": "total"
+                },
+                {
+                  "key": "toal"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "o",
+            {
+              "args": [
+                {
+                  "key": "orders"
+                },
+                {
+                  "key": "ordrs"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "open",
+            {
+              "args": [
+                {
+                  "key": "open"
+                },
+                {
+                  "key": "gpen"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": false,
+        "detected_by": "none",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "orders",
+            {
+              "args": [
+                {
+                  "key": "orders"
+                },
+                {
+                  "key": "roders"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "open",
+            {
+              "args": [
+                {
+                  "key": "open"
+                },
+                {
+                  "key": "oppen"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": false,
+        "detected_by": "none",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "total",
+            {
+              "args": [
+                {
+                  "key": "total"
+                },
+                {
+                  "key": "ottal"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "total",
+            {
+              "args": [
+                {
+                  "key": "total"
+                },
+                {
+                  "key": "toeal"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "orders",
+            {
+              "args": [
+                {
+                  "key": "orders"
+                },
+                {
+                  "key": "oorders"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "orders",
+            {
+              "args": [
+                {
+                  "key": "orders"
+                },
+                {
+                  "key": "rders"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "open",
+            {
+              "args": [
+                {
+                  "key": "open"
+                },
+                {
+                  "key": "gpen"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": false,
+        "detected_by": "none",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "orders",
+            {
+              "args": [
+                {
+                  "key": "orders"
+                },
+                {
+                  "key": "order"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "open",
+            {
+              "args": [
+                {
+                  "key": "open"
+                },
+                {
+                  "key": "opek"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": false,
+        "detected_by": "none",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "open",
+            {
+              "args": [
+                {
+                  "key": "open"
+                },
+                {
+                  "key": "oen"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": false,
+        "detected_by": "none",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "orders",
+            {
+              "args": [
+                {
+                  "key": "orders"
+                },
+                {
+                  "key": "ordeers"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "u",
+            {
+              "args": [
+                {
+                  "key": "users"
+                },
+                {
+                  "key": "userss"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "u",
+            {
+              "args": [
+                {
+                  "key": "users"
+                },
+                {
+                  "key": "xsers"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "open",
+            {
+              "args": [
+                {
+                  "key": "open"
+                },
+                {
+                  "key": "oppen"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": false,
+        "detected_by": "none",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "orders",
+            {
+              "args": [
+                {
+                  "key": "orders"
+                },
+                {
+                  "key": "odrers"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "orders",
+            {
+              "args": [
+                {
+                  "key": "orders"
+                },
+                {
+                  "key": "ordesr"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "o",
+            {
+              "args": [
+                {
+                  "key": "orders"
+                },
+                {
+                  "key": "oredrs"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "orders",
+            {
+              "args": [
+                {
+                  "key": "orders"
+                },
+                {
+                  "key": "ordres"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "head",
+            {
+              "args": [
+                {
+                  "key": "headline"
+                },
+                {
+                  "key": "yeadline"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "o",
+            {
+              "args": [
+                {
+                  "key": "orders"
+                },
+                {
+                  "key": "oredrs"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "rename",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": true
+      },
+      {
+        "category": "field_key_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "open",
+            {
+              "args": [
+                {
+                  "key": "open"
+                },
+                {
+                  "key": "oopen"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": false,
+        "detected_by": "none",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W4",
+        "changed": [
+          [
+            "raw",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "nonempty",
+                    "args": []
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      1048576
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "nonempty",
+                    "args": []
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      449
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W2",
+        "changed": [
+          [
+            "summary",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      2048
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      16
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W1",
+        "changed": [
+          [
+            "n",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "max",
+                    "args": [
+                      1000
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "max",
+                    "args": [
+                      21
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W1",
+        "changed": [
+          [
+            "n",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "max",
+                    "args": [
+                      1000
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "max",
+                    "args": [
+                      21
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W2",
+        "changed": [
+          [
+            "total",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      0
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      1255
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W5",
+        "changed": [
+          [
+            "no",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      1
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      9
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      65536
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "status",
+                    "args": [
+                      200,
+                      299
+                    ]
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      253
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W4",
+        "changed": [
+          [
+            "raw",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "nonempty",
+                    "args": []
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      1048576
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "nonempty",
+                    "args": []
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      449
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W2",
+        "changed": [
+          [
+            "summary",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      2048
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      16
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W4",
+        "changed": [
+          [
+            "raw",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "nonempty",
+                    "args": []
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      1048576
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "nonempty",
+                    "args": []
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      449
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W1",
+        "changed": [
+          [
+            "n",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "max",
+                    "args": [
+                      1000
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "max",
+                    "args": [
+                      21
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W2",
+        "changed": [
+          [
+            "total",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      0
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      1255
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W1",
+        "changed": [
+          [
+            "n",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "max",
+                    "args": [
+                      1000
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "max",
+                    "args": [
+                      21
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W5",
+        "changed": [
+          [
+            "no",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      1
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      8
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W5",
+        "changed": [
+          [
+            "nu",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      1
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      8
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W2",
+        "changed": [
+          [
+            "summary",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      2048
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      16
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W5",
+        "changed": [
+          [
+            "no",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      1
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      8
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W4",
+        "changed": [
+          [
+            "raw",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "nonempty",
+                    "args": []
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      1048576
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "nonempty",
+                    "args": []
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      449
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W4",
+        "changed": [
+          [
+            "raw",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "nonempty",
+                    "args": []
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      1048576
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "nonempty",
+                    "args": []
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      449
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W5",
+        "changed": [
+          [
+            "nu",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      1
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      4
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W5",
+        "changed": [
+          [
+            "no",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      1
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      9
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W2",
+        "changed": [
+          [
+            "summary",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      2048
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      16
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W4",
+        "changed": [
+          [
+            "raw",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "nonempty",
+                    "args": []
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      1048576
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "nonempty",
+                    "args": []
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      449
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W4",
+        "changed": [
+          [
+            "raw",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "nonempty",
+                    "args": []
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      1048576
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "nonempty",
+                    "args": []
+                  },
+                  {
+                    "op": "maxbytes",
+                    "args": [
+                      449
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "bound_tight",
+        "workload": "W5",
+        "changed": [
+          [
+            "nu",
+            {
+              "checks": [
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      1
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "op": "min",
+                    "args": [
+                      8
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 1,
+        "top1_kind": "relax",
+        "top1_resolves": true,
+        "top3_resolves": true,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W2",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W2",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W1",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W5",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W1",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W1",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W3",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W5",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W1",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W2",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W1",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W3",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W2",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W2",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W3",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W1",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W2",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W5",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W5",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W1",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W5",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W1",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W1",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W3",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "permanent_404",
+        "workload": "W5",
+        "changed": [],
+        "detected": true,
+        "detected_by": "violation",
+        "n_proposals": 0,
+        "top1_kind": null,
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/tickets"
+                },
+                {
+                  "url": "https://apii.example.com/tickets"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "orders",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/v1/orders"
+                },
+                {
+                  "url": "https://appi.example.com/v1/orders"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/tickets"
+                },
+                {
+                  "url": "https://ape.example.com/tickets"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "users",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/v1/users"
+                },
+                {
+                  "url": "https://apii.example.com/v1/users"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/orders"
+                },
+                {
+                  "url": "https://aip.example.com/orders"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/tickets"
+                },
+                {
+                  "url": "https://pai.example.com/tickets"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/orders"
+                },
+                {
+                  "url": "https://appi.example.com/orders"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/tickets"
+                },
+                {
+                  "url": "https://ami.example.com/tickets"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/orders"
+                },
+                {
+                  "url": "https://aapi.example.com/orders"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "a",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/sales"
+                },
+                {
+                  "url": "https://ai.example.com/sales"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/tickets"
+                },
+                {
+                  "url": "https://appi.example.com/tickets"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/tickets"
+                },
+                {
+                  "url": "https://apj.example.com/tickets"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/tickets"
+                },
+                {
+                  "url": "https://ap.example.com/tickets"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/orders"
+                },
+                {
+                  "url": "https://pi.example.com/orders"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "a",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/sales"
+                },
+                {
+                  "url": "https://pai.example.com/sales"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/tickets"
+                },
+                {
+                  "url": "https://npi.example.com/tickets"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "a",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/sales"
+                },
+                {
+                  "url": "https://aip.example.com/sales"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "users",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/v1/users"
+                },
+                {
+                  "url": "https://ap.example.com/v1/users"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W3",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/tickets"
+                },
+                {
+                  "url": "https://apy.example.com/tickets"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/orders"
+                },
+                {
+                  "url": "https://aapi.example.com/orders"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/orders"
+                },
+                {
+                  "url": "https://aip.example.com/orders"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/orders"
+                },
+                {
+                  "url": "https://apii.example.com/orders"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W5",
+        "changed": [
+          [
+            "orders",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/v1/orders"
+                },
+                {
+                  "url": "https://upi.example.com/v1/orders"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W1",
+        "changed": [
+          [
+            "fetch",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/orders"
+                },
+                {
+                  "url": "https://apx.example.com/orders"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      },
+      {
+        "category": "url_host_typo",
+        "workload": "W2",
+        "changed": [
+          [
+            "a",
+            {
+              "args": [
+                {
+                  "url": "https://api.example.com/sales"
+                },
+                {
+                  "url": "https://appi.example.com/sales"
+                }
+              ]
+            }
+          ]
+        ],
+        "detected": true,
+        "detected_by": "denied",
+        "n_proposals": 1,
+        "top1_kind": "authority",
+        "top1_resolves": false,
+        "top3_resolves": false,
+        "top1_intended": false
+      }
+    ]
+  },
+  "determinism": {
+    "W1": {
+      "runs": 2000,
+      "distinct_digests": 1
+    },
+    "W2": {
+      "runs": 2000,
+      "distinct_digests": 1
+    },
+    "W3": {
+      "runs": 2000,
+      "distinct_digests": 1
+    },
+    "W4": {
+      "runs": 2000,
+      "distinct_digests": 1
+    },
+    "W5": {
+      "runs": 2000,
+      "distinct_digests": 1
+    },
+    "W2_stochastic_control": {
+      "runs": 100,
+      "distinct_digests": 100
+    }
+  }
+}
